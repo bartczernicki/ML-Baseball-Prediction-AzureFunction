@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "storage1": {
+      "resourceId": null,
+      "type": "storage.emulator",
+      "connectionId": "AzureWebJobsStorage",
+      "secretStore": null
+    }
+  }
+}
