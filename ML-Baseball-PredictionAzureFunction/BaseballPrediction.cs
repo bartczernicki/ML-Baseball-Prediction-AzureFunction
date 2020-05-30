@@ -15,7 +15,6 @@ namespace ML_Baseball_PredictionAzureFunction
     public class BaseballPrediction
     {
         private readonly PredictionEnginePool<MLBBaseballBatter, MLBHOFPrediction> _predictionEnginePool;
-        //private readonly BaseballDataSampleService _baseBallDataService;
 
         public BaseballPrediction(PredictionEnginePool<MLBBaseballBatter, MLBHOFPrediction> predictionEnginePool)
         {
