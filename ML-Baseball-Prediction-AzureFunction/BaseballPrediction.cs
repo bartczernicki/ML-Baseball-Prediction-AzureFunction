@@ -50,8 +50,22 @@ namespace ML_Baseball_PredictionAzureFunction
                     var predictionResults = new List<double>();
                     foreach (var batter in baseballBatters)
                     {
-                        var prediction = _predictionEnginePool.Predict(machineLearningModelToUse, batter);
-                        predictionResults.Add(Math.Round(prediction.Probability, 5, MidpointRounding.AwayFromZero));
+                        if (modelAlgorithm == "Ensemble")
+                        {
+                            var predictionFastTree = _predictionEnginePool.Predict($"{predictionType}-FastTree", batter);
+                            var predictionLightGbm = _predictionEnginePool.Predict($"{predictionType}-LightGbm", batter);
+                            var predictionGeneralizedAdditiveModels = _predictionEnginePool.Predict($"{predictionType}-GeneralizedAdditiveModels", batter);
+
+                            // Simple ensemble with equal voting weights
+                            var ensemblePrediction = (predictionFastTree.Probability + predictionLightGbm.Probability + predictionGeneralizedAdditiveModels.Probability) / 3;
+
+                            predictionResults.Add(Math.Round(ensemblePrediction, 5, MidpointRounding.AwayFromZero));
+                        }
+                        else
+                        {
+                            var prediction = _predictionEnginePool.Predict(machineLearningModelToUse, batter);
+                            predictionResults.Add(Math.Round(prediction.Probability, 5, MidpointRounding.AwayFromZero));
+                        }
                     }
 
                     log.LogInformation("PROCESSED:  {} batter predictions, using {}", baseballBatters.Count, machineLearningModelToUse);
