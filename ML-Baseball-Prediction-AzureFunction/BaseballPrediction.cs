@@ -26,6 +26,7 @@ namespace ML_Baseball_PredictionAzureFunction
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
+            // For POST, process the request Body (array of MLB players)
             if (req.Method == "POST")
             {
                 // Get parameters
@@ -76,6 +77,7 @@ namespace ML_Baseball_PredictionAzureFunction
                 }
             }
 
+            // Return generic message for GET
             if (req.Method == "GET")
             {
                 return new OkObjectResult("ML-Baseball Function is operating");
