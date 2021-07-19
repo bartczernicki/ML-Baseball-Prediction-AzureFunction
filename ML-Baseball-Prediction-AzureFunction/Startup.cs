@@ -23,12 +23,12 @@ namespace ML_Baseball_PredictionAzureFunction
 
             var binDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var rootDirectory = Path.GetFullPath(Path.Combine(binDirectory, ".."));
-            _modelPathInducted = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "InductedToHallOfFame-GeneralizedAdditiveModels.mlnet"));
-            _modelPathOnBallot = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "OnHallOfFameBallot-GeneralizedAdditiveModels.mlnet"));
-            _modelPathInductedFastTree = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "InductedToHallOfFame-FastTree.mlnet"));
-            _modelPathOnBallotFastTree = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "OnHallOfFameBallot-FastTree.mlnet"));
-            _modelPathInductedLightGbm = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "InductedToHallOfFame-LightGbm.mlnet"));
-            _modelPathOnBallotLightGbm = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "OnHallOfFameBallot-LightGbm.mlnet"));
+            _modelPathInducted = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "InductedToHoF-GeneralizedAdditiveModels.mlnet"));
+            _modelPathOnBallot = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "OnHoFBallot-GeneralizedAdditiveModels.mlnet"));
+            _modelPathInductedFastTree = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "InductedToHoF-FastTree.mlnet"));
+            _modelPathOnBallotFastTree = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "OnHoFBallot-FastTree.mlnet"));
+            _modelPathInductedLightGbm = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "InductedToHoF-LightGbm.mlnet"));
+            _modelPathOnBallotLightGbm = Path.GetFullPath(Path.Combine(rootDirectory, "Models", "OnHoFBallot-LightGbm.mlnet"));
 
             //if (_environment == "Development")
             //{
@@ -44,12 +44,12 @@ namespace ML_Baseball_PredictionAzureFunction
         public override void Configure(IFunctionsHostBuilder builder)
         {
             builder.Services.AddPredictionEnginePool<MLBBaseballBatter, MLBHOFPrediction>()
-                .FromFile(modelName: "InductedToHallOfFame-GeneralizedAdditiveModels", filePath: _modelPathInducted, watchForChanges: true)
-                .FromFile(modelName: "OnHallOfFameBallot-GeneralizedAdditiveModels", filePath: _modelPathOnBallot, watchForChanges: true)
-                .FromFile(modelName: "InductedToHallOfFame-FastTree", filePath: _modelPathInductedFastTree, watchForChanges: true)
-                .FromFile(modelName: "OnHallOfFameBallot-FastTree", filePath: _modelPathOnBallotFastTree, watchForChanges: true)
-                .FromFile(modelName: "InductedToHallOfFame-LightGbm", filePath: _modelPathInductedLightGbm, watchForChanges: true)
-                .FromFile(modelName: "OnHallOfFameBallot-LightGbm", filePath: _modelPathOnBallotLightGbm, watchForChanges: true);
+                .FromFile(modelName: "InductedToHoF-GeneralizedAdditiveModels", filePath: _modelPathInducted, watchForChanges: true)
+                .FromFile(modelName: "OnHoFBallot-GeneralizedAdditiveModels", filePath: _modelPathOnBallot, watchForChanges: true)
+                .FromFile(modelName: "InductedToHoF-FastTree", filePath: _modelPathInductedFastTree, watchForChanges: true)
+                .FromFile(modelName: "OnHoFBallot-FastTree", filePath: _modelPathOnBallotFastTree, watchForChanges: true)
+                .FromFile(modelName: "InductedToHoF-LightGbm", filePath: _modelPathInductedLightGbm, watchForChanges: true)
+                .FromFile(modelName: "OnHoFBallot-LightGbm", filePath: _modelPathOnBallotLightGbm, watchForChanges: true);
         }
     }
 }

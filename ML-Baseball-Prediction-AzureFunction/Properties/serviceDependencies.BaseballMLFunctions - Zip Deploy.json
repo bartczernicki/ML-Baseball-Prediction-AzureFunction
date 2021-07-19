@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "storage1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Storage/storageAccounts/baseballmlfunctions",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/baseballmlfunctions",
       "type": "storage.azure",
       "connectionId": "AzureWebJobsStorage",
       "secretStore": "AzureAppSettings"

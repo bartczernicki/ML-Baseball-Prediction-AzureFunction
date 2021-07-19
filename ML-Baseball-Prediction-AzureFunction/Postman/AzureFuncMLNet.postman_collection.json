@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "7ccf7565-7364-4e3a-a322-671a72e16ef8",
+		"name": "AzureFuncMLNet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Local Azure Function - Test For It Working",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/MakeBaseballPrediction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"MakeBaseballPrediction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Local  InductedToHoF - FastTree",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 22,\n        \"AB\": 10195,\n        \"R\": 1882,\n        \"H\": 3514,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 117,\n        \"RBI\": 1529,\n        \"SB\": 432,\n        \"BattingAverage\": 0.3447,\n        \"SluggingPct\": 0.5003,\n        \"AllStarAppearances\": 0,\n        \"MVPs\": 1,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 5101,\n        \"TotalPlayerAwards\": 27\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 14,\n        \"AB\": 6428,\n        \"R\": 1120,\n        \"H\": 2193,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 154,\n        \"RBI\": 1078,\n        \"SB\": 56,\n        \"BattingAverage\": 0.3412,\n        \"SluggingPct\": 0.5059,\n        \"AllStarAppearances\": 3,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3252,\n        \"TotalPlayerAwards\": 12\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 17,\n        \"AB\": 7559,\n        \"R\": 1183,\n        \"H\": 2416,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 58,\n        \"RBI\": 1273,\n        \"SB\": 158,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4351,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3289,\n        \"TotalPlayerAwards\": 26\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 13,\n        \"AB\": 5169,\n        \"R\": 1041,\n        \"H\": 1652,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 119,\n        \"RBI\": 832,\n        \"SB\": 64,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4778,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 2,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 2470,\n        \"TotalPlayerAwards\": 28\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/MakeBaseballPrediction?PredictionType=InductedToHoF&ModelAlgorithm=FastTree",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"MakeBaseballPrediction"
+					],
+					"query": [
+						{
+							"key": "PredictionType",
+							"value": "InductedToHoF"
+						},
+						{
+							"key": "ModelAlgorithm",
+							"value": "FastTree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Local InductedToHoF - GeneralizedAdditiveModels",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 22,\n        \"AB\": 10195,\n        \"R\": 1882,\n        \"H\": 3514,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 117,\n        \"RBI\": 1529,\n        \"SB\": 432,\n        \"BattingAverage\": 0.3447,\n        \"SluggingPct\": 0.5003,\n        \"AllStarAppearances\": 0,\n        \"MVPs\": 1,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 5101,\n        \"TotalPlayerAwards\": 27\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 14,\n        \"AB\": 6428,\n        \"R\": 1120,\n        \"H\": 2193,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 154,\n        \"RBI\": 1078,\n        \"SB\": 56,\n        \"BattingAverage\": 0.3412,\n        \"SluggingPct\": 0.5059,\n        \"AllStarAppearances\": 3,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3252,\n        \"TotalPlayerAwards\": 12\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 17,\n        \"AB\": 7559,\n        \"R\": 1183,\n        \"H\": 2416,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 58,\n        \"RBI\": 1273,\n        \"SB\": 158,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4351,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3289,\n        \"TotalPlayerAwards\": 26\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 13,\n        \"AB\": 5169,\n        \"R\": 1041,\n        \"H\": 1652,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 119,\n        \"RBI\": 832,\n        \"SB\": 64,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4778,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 2,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 2470,\n        \"TotalPlayerAwards\": 28\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/MakeBaseballPrediction?PredictionType=InductedToHoF&ModelAlgorithm=GeneralizedAdditiveModels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"MakeBaseballPrediction"
+					],
+					"query": [
+						{
+							"key": "PredictionType",
+							"value": "InductedToHoF"
+						},
+						{
+							"key": "ModelAlgorithm",
+							"value": "GeneralizedAdditiveModels"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Local InductedToHoF - LightGbm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 22,\n        \"AB\": 10195,\n        \"R\": 1882,\n        \"H\": 3514,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 117,\n        \"RBI\": 1529,\n        \"SB\": 432,\n        \"BattingAverage\": 0.3447,\n        \"SluggingPct\": 0.5003,\n        \"AllStarAppearances\": 0,\n        \"MVPs\": 1,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 5101,\n        \"TotalPlayerAwards\": 27\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 14,\n        \"AB\": 6428,\n        \"R\": 1120,\n        \"H\": 2193,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 154,\n        \"RBI\": 1078,\n        \"SB\": 56,\n        \"BattingAverage\": 0.3412,\n        \"SluggingPct\": 0.5059,\n        \"AllStarAppearances\": 3,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3252,\n        \"TotalPlayerAwards\": 12\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 17,\n        \"AB\": 7559,\n        \"R\": 1183,\n        \"H\": 2416,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 58,\n        \"RBI\": 1273,\n        \"SB\": 158,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4351,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3289,\n        \"TotalPlayerAwards\": 26\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 13,\n        \"AB\": 5169,\n        \"R\": 1041,\n        \"H\": 1652,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 119,\n        \"RBI\": 832,\n        \"SB\": 64,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4778,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 2,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 2470,\n        \"TotalPlayerAwards\": 28\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/MakeBaseballPrediction?PredictionType=InductedToHoF&ModelAlgorithm=LightGbm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"MakeBaseballPrediction"
+					],
+					"query": [
+						{
+							"key": "PredictionType",
+							"value": "InductedToHoF"
+						},
+						{
+							"key": "ModelAlgorithm",
+							"value": "LightGbm"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Local InductedToHoF - Ensemble",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 22,\n        \"AB\": 10195,\n        \"R\": 1882,\n        \"H\": 3514,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 117,\n        \"RBI\": 1529,\n        \"SB\": 432,\n        \"BattingAverage\": 0.3447,\n        \"SluggingPct\": 0.5003,\n        \"AllStarAppearances\": 0,\n        \"MVPs\": 1,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 5101,\n        \"TotalPlayerAwards\": 27\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 14,\n        \"AB\": 6428,\n        \"R\": 1120,\n        \"H\": 2193,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 154,\n        \"RBI\": 1078,\n        \"SB\": 56,\n        \"BattingAverage\": 0.3412,\n        \"SluggingPct\": 0.5059,\n        \"AllStarAppearances\": 3,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3252,\n        \"TotalPlayerAwards\": 12\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 17,\n        \"AB\": 7559,\n        \"R\": 1183,\n        \"H\": 2416,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 58,\n        \"RBI\": 1273,\n        \"SB\": 158,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4351,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3289,\n        \"TotalPlayerAwards\": 26\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 13,\n        \"AB\": 5169,\n        \"R\": 1041,\n        \"H\": 1652,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 119,\n        \"RBI\": 832,\n        \"SB\": 64,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4778,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 2,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 2470,\n        \"TotalPlayerAwards\": 28\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/MakeBaseballPrediction?PredictionType=InductedToHoF&ModelAlgorithm=LightGbm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"MakeBaseballPrediction"
+					],
+					"query": [
+						{
+							"key": "PredictionType",
+							"value": "InductedToHoF"
+						},
+						{
+							"key": "ModelAlgorithm",
+							"value": "LightGbm"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Local OnHoFBallot - FastTree",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 22,\n        \"AB\": 10195,\n        \"R\": 1882,\n        \"H\": 3514,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 117,\n        \"RBI\": 1529,\n        \"SB\": 432,\n        \"BattingAverage\": 0.3447,\n        \"SluggingPct\": 0.5003,\n        \"AllStarAppearances\": 0,\n        \"MVPs\": 1,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 5101,\n        \"TotalPlayerAwards\": 27\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 14,\n        \"AB\": 6428,\n        \"R\": 1120,\n        \"H\": 2193,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 154,\n        \"RBI\": 1078,\n        \"SB\": 56,\n        \"BattingAverage\": 0.3412,\n        \"SluggingPct\": 0.5059,\n        \"AllStarAppearances\": 3,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3252,\n        \"TotalPlayerAwards\": 12\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 17,\n        \"AB\": 7559,\n        \"R\": 1183,\n        \"H\": 2416,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 58,\n        \"RBI\": 1273,\n        \"SB\": 158,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4351,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3289,\n        \"TotalPlayerAwards\": 26\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 13,\n        \"AB\": 5169,\n        \"R\": 1041,\n        \"H\": 1652,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 119,\n        \"RBI\": 832,\n        \"SB\": 64,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4778,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 2,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 2470,\n        \"TotalPlayerAwards\": 28\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/MakeBaseballPrediction?PredictionType=OnHoFBallot&ModelAlgorithm=FastTree",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"MakeBaseballPrediction"
+					],
+					"query": [
+						{
+							"key": "PredictionType",
+							"value": "OnHoFBallot"
+						},
+						{
+							"key": "ModelAlgorithm",
+							"value": "FastTree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Local OnHoFBallot - GeneralizedAdditiveModels",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 22,\n        \"AB\": 10195,\n        \"R\": 1882,\n        \"H\": 3514,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 117,\n        \"RBI\": 1529,\n        \"SB\": 432,\n        \"BattingAverage\": 0.3447,\n        \"SluggingPct\": 0.5003,\n        \"AllStarAppearances\": 0,\n        \"MVPs\": 1,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 5101,\n        \"TotalPlayerAwards\": 27\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 14,\n        \"AB\": 6428,\n        \"R\": 1120,\n        \"H\": 2193,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 154,\n        \"RBI\": 1078,\n        \"SB\": 56,\n        \"BattingAverage\": 0.3412,\n        \"SluggingPct\": 0.5059,\n        \"AllStarAppearances\": 3,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3252,\n        \"TotalPlayerAwards\": 12\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 17,\n        \"AB\": 7559,\n        \"R\": 1183,\n        \"H\": 2416,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 58,\n        \"RBI\": 1273,\n        \"SB\": 158,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4351,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3289,\n        \"TotalPlayerAwards\": 26\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 13,\n        \"AB\": 5169,\n        \"R\": 1041,\n        \"H\": 1652,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 119,\n        \"RBI\": 832,\n        \"SB\": 64,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4778,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 2,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 2470,\n        \"TotalPlayerAwards\": 28\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/MakeBaseballPrediction?PredictionType=OnHoFBallot&ModelAlgorithm=GeneralizedAdditiveModels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"MakeBaseballPrediction"
+					],
+					"query": [
+						{
+							"key": "PredictionType",
+							"value": "OnHoFBallot"
+						},
+						{
+							"key": "ModelAlgorithm",
+							"value": "GeneralizedAdditiveModels"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Local OnHoFBallot - LightGbm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 22,\n        \"AB\": 10195,\n        \"R\": 1882,\n        \"H\": 3514,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 117,\n        \"RBI\": 1529,\n        \"SB\": 432,\n        \"BattingAverage\": 0.3447,\n        \"SluggingPct\": 0.5003,\n        \"AllStarAppearances\": 0,\n        \"MVPs\": 1,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 5101,\n        \"TotalPlayerAwards\": 27\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 14,\n        \"AB\": 6428,\n        \"R\": 1120,\n        \"H\": 2193,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 154,\n        \"RBI\": 1078,\n        \"SB\": 56,\n        \"BattingAverage\": 0.3412,\n        \"SluggingPct\": 0.5059,\n        \"AllStarAppearances\": 3,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3252,\n        \"TotalPlayerAwards\": 12\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 17,\n        \"AB\": 7559,\n        \"R\": 1183,\n        \"H\": 2416,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 58,\n        \"RBI\": 1273,\n        \"SB\": 158,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4351,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3289,\n        \"TotalPlayerAwards\": 26\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 13,\n        \"AB\": 5169,\n        \"R\": 1041,\n        \"H\": 1652,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 119,\n        \"RBI\": 832,\n        \"SB\": 64,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4778,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 2,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 2470,\n        \"TotalPlayerAwards\": 28\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/MakeBaseballPrediction?PredictionType=OnHoFBallot&ModelAlgorithm=LightGbm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"MakeBaseballPrediction"
+					],
+					"query": [
+						{
+							"key": "PredictionType",
+							"value": "OnHoFBallot"
+						},
+						{
+							"key": "ModelAlgorithm",
+							"value": "LightGbm"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Local OnHoFBallot - Ensemble",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 22,\n        \"AB\": 10195,\n        \"R\": 1882,\n        \"H\": 3514,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 117,\n        \"RBI\": 1529,\n        \"SB\": 432,\n        \"BattingAverage\": 0.3447,\n        \"SluggingPct\": 0.5003,\n        \"AllStarAppearances\": 0,\n        \"MVPs\": 1,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 5101,\n        \"TotalPlayerAwards\": 27\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 14,\n        \"AB\": 6428,\n        \"R\": 1120,\n        \"H\": 2193,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 154,\n        \"RBI\": 1078,\n        \"SB\": 56,\n        \"BattingAverage\": 0.3412,\n        \"SluggingPct\": 0.5059,\n        \"AllStarAppearances\": 3,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3252,\n        \"TotalPlayerAwards\": 12\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 17,\n        \"AB\": 7559,\n        \"R\": 1183,\n        \"H\": 2416,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 58,\n        \"RBI\": 1273,\n        \"SB\": 158,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4351,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 0,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 3289,\n        \"TotalPlayerAwards\": 26\n    },\n    {\n        \"InductedToHallOfFame\": \"1\",\n        \"YearsPlayed\": 13,\n        \"AB\": 5169,\n        \"R\": 1041,\n        \"H\": 1652,\n        \"X2B\": 2,\n        \"X3B\": 3,\n        \"HR\": 119,\n        \"RBI\": 832,\n        \"SB\": 64,\n        \"BattingAverage\": 0.3196,\n        \"SluggingPct\": 0.4778,\n        \"AllStarAppearances\": 2,\n        \"MVPs\": 2,\n        \"TripleCrowns\": 0,\n        \"GoldGloves\": 0,\n        \"MajorLeaguePlayerOfTheYearAwards\": 0,\n        \"TB\": 2470,\n        \"TotalPlayerAwards\": 28\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/MakeBaseballPrediction?PredictionType=OnHoFBallot&ModelAlgorithm=LightGbm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"MakeBaseballPrediction"
+					],
+					"query": [
+						{
+							"key": "PredictionType",
+							"value": "OnHoFBallot"
+						},
+						{
+							"key": "ModelAlgorithm",
+							"value": "LightGbm"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
